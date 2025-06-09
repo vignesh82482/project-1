@@ -1,0 +1,19 @@
+/*External css*/
+/* #-id */
+#welcome{
+    color:  rgb(77, 19, 67);
+    font-size: 130%;
+}
+/* .-class */
+.no{
+    color: yellowgreen;
+}
+#userExperience{
+    color: chartreuse;
+}
+.color{
+    color: burlywood;
+}
+.page2{
+    color: rgb(51, 20, 20);
+}

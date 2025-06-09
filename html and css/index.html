@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MythicHaven</title>
+    <link rel="icon" href="/img/date.png">
+    <style>
+        /* background image */
+        body{ 
+            /* background-image: url('/img/page3.webp'); background-size: cover; */
+            background-color: grey;
+        }
+        .page2logo{
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body bgcolor="gray" text="white">
+    <center>
+    <div class="page2logo">
+        <img src="/img/logo-no-background.png" alt="MythicHaven" width="300" height="100">
+    </div>
+    <div class="page2">
+    <h2 class="no">Register</h2>
+        <table>
+            <tr>
+                <th>Name:</th> <td><input type="text" placeholder="Name" required></td>
+            </tr>
+            <tr>
+                <th>Phone no:</th> <td> <input type="number" placeholder="Phone no" required></td>
+            </tr>
+            <tr>
+                <th>Email id:</th><td><input type="email" placeholder="Email id" required></td>
+            </tr>
+            <tr>
+                <th>Products:</th>
+                <td>
+                    <select name="products" required>
+                        <option value="select">select</option>
+                        <option value="Hoodies">hoodies</option>
+                        <option value="shoes">shoes</option>
+                        <option value="shirts">shirts</option>
+                        <option value="sneakers">sneakers</option>
+                        <option value="perfume">perfume</option>
+                        <option value="lycra pants">lycra pants</option>
+                        <option value="jeans">jeans</option>
+                        <option value="jackets">jackets</option>
+                        <option value="others">others</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td><td><input type="checkbox" required>I'm 18 are older</td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <button type="submit" class="one" onclick="return validateForm()">Submit</button>
+    </center>
+<script>
+    function validateForm() {
+        var name = document.querySelector("input[placeholder='Name']").value;
+        var phone = document.querySelector("input[placeholder='Phone no']").value;
+        var email = document.querySelector("input[placeholder='Email id']").value;
+        var product = document.querySelector("select[name='products']").value;
+        var checkbox = document.querySelector("input[type='checkbox']").checked;
+
+        if (name === "" || phone === "" || email === "" || product === "select" || !checkbox) {
+            alert("Please fill out all required fields.");
+            return false;
+        }
+        window.location.href = "/page3.html";
+        return true;
+    }
+</script>
+</body>
+</html>
