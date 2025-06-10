@@ -3,20 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MythicHaven</title>
+    <title>MythicHaven - Registration Complete</title>
     <link rel="icon" href="/img/date.png">
-    <link rel="stylesheet" href="/style.css">
     <style>
-        body{ background-image: url('/img/page3.webp'); background-size: cover;}
+        body {
+            background: url('/img/page3.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 100px;
+            padding: 30px;
+            background-color: rgba(50, 50, 50, 0.8);
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: chartreuse;
+        }
+
+        .home-btn {
+            background-color: darkred;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .home-btn:hover {
+            background-color: crimson;
+        }
     </style>
 </head>
 <body>
     <center>
-    <div class="color">
-        <h2>Registered Successfully</h2>
-        <p>Thank you for your response</p>
-        <a href="/democh.html"><button>Go To Home</button></a><br>
-    </div>
+        <div class="container">
+            <h2>Registration Successful!</h2>
+            <p>Thank you for joining MythicHaven.</p>
+            <a href="/Homepage.html"><button class="home-btn">Go To Home</button></a>
+        </div>
     </center>
 </body>
 </html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MythicHaven - Register</title>
+    <link rel="icon" href="/img/date.png">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #5c5c5c, #4b4b4b);
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: darkgray;
+            border-bottom: 2px solid rgb(82, 85, 79);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        .logo img {
+            width: 200px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(50, 50, 50, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        h2 {
+            color: chartreuse;
+        }
+        table {
+            width: 100%;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 90%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        .submit-btn {
+            background-color: darkred;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="/img/logo-no-background.png" alt="MythicHaven">
+        </div>
+    </div><br>
+
+    <div class="form-container">
+        <h2>Register Now</h2>
+        <form onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <th>Name:</th>
+                    <td><input type="text" placeholder="Your Name" required></td>
+                </tr>
+                <tr>
+                    <th>Phone:</th>
+                    <td><input type="number" placeholder="Phone Number" required></td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td><input type="email" placeholder="Email ID" required></td>
+                </tr>
+                <tr>
+                    <th>Product:</th>
+                    <td>
+                        <select required>
+                            <option value="">Select</option>
+                            <option value="hoodies">Hoodies</option>
+                            <option value="shoes">Shoes</option>
+                            <option value="shirts">Shirts</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a href="/page3.html"><button type="submit" class="submit-btn">Submit</button></a>
+                        
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.querySelector("input[placeholder='Your Name']").value;
+            var phone = document.querySelector("input[placeholder='Phone Number']").value;
+            var email = document.querySelector("input[placeholder='Email ID']").value;
+            var product = document.querySelector("select").value;
+
+            if (name === "" || phone === "" || email === "" || product === "") {
+                alert("Please fill out all required fields.");
+                return false;
+            }
+            window.location.href = "/page3.html";
+            return false;
+        }
+    </script>
+</body>
+</html>
